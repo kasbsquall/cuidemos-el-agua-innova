@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Manual interactivo sobre el cuidado del agua - Proyecto escolar Innova Schools. Aprende a cuidar el agua con juegos, videos y actividades divertidas.">
+  <title>💧 ¡Cuidemos el Agua! - Manual Interactivo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+</head>
+
+<body>
+
+  <!-- ========== NAVEGACIÓN ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo" id="logo-home">
+      <img src="img/gotita.png" alt="Gotita mascota">
+      <span>💧 Cuidemos el Agua</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="nav-link active" data-page="inicio"><span class="emoji">🏠</span> Inicio</a></li>
+      <li><a href="#" class="nav-link" data-page="encuesta"><span class="emoji">📋</span> Encuesta</a></li>
+      <li><a href="#" class="nav-link" data-page="videos"><span class="emoji">🎬</span> Videos</a></li>
+      <li><a href="#" class="nav-link" data-page="juegos"><span class="emoji">🎮</span> Juegos</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA: INICIO (HOME)                      -->
+  <!-- ========================================== -->
+  <div id="pagina-inicio" class="pagina activa">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+      <img src="img/hero_banner.png" alt="¡Cuidemos el Agua!" class="hero-banner">
+      <h1>¡Cuidemos el Agua! 💧</h1>
+      <p>Manual interactivo creado por estudiantes de Innova Schools para aprender a cuidar cada gota de agua</p>
+      <div class="hero-badges">
+        <div class="badge">📖 Manual Digital</div>
+        <div class="badge">🎮 Juegos Educativos</div>
+        <div class="badge">🎬 Videos Divertidos</div>
+      </div>
+    </section>
+
+    <!-- PROBLEMÁTICA -->
+    <section class="seccion fondo-agua" id="problematica">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">🔍</span>
+        Problemática Identificada
+      </div>
+      <p class="seccion-subtitulo">Descubrimos problemas con el uso del agua en nuestro colegio</p>
+
+      <div class="problema-contenido animar-entrada">
+        <img src="img/problematica.png" alt="Problemática identificada">
+        <div class="problema-texto">
+          <h3>¿Qué problema encontramos?</h3>
+          <ul class="problema-lista">
+            <li>Algunos dejan los caños abiertos mientras se lavan las manos</li>
+            <li>Otros no cierran bien los caños después de usarlos</li>
+            <li>Hay alumnos que no saben por qué el agua es tan importante para la vida</li>
+          </ul>
+          <h3 style="margin-top: 20px;">¿Qué solución proponemos?</h3>
+          <ul class="problema-lista">
+            <li>Crear un manual interactivo con código QR</li>
+            <li>Videos educativos sobre el cuidado del agua</li>
+            <li>Encuestas divertidas para crear conciencia</li>
+            <li>Juegos para aprender jugando</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="separador">
+      <div class="linea"></div>
+      <span class="gota">💧</span>
+      <div class="linea"></div>
+    </div>
+
+    <!-- ¿SABÍAS QUE? - DATOS DEL AGUA -->
+    <section class="seccion" id="datos">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">🌍</span>
+        ¿Sabías que...?
+      </div>
+      <p class="seccion-subtitulo">Datos increíbles sobre el agua en nuestro planeta</p>
+
+      <div class="infografia-contenedor animar-entrada">
+        <img src="img/datos_agua.png" alt="Datos del agua en el planeta">
+        <div class="datos-lista">
+          <div class="dato-item">
+            <span class="dato-icono">🌊</span>
+            <div class="dato-texto">
+              <strong>97% es agua salada</strong>
+              <p>La mayor parte del agua del planeta está en los océanos y no se puede beber</p>
+            </div>
+          </div>
+          <div class="dato-item">
+            <span class="dato-icono">❄️</span>
+            <div class="dato-texto">
+              <strong>Solo el 3% es agua dulce</strong>
+              <p>Y de ese 3%, el 70% está congelada en los glaciares y los polos</p>
+            </div>
+          </div>
+          <div class="dato-item">
+            <span class="dato-icono">🚰</span>
+            <div class="dato-texto">
+              <strong>Menos del 1% es accesible</strong>
+              <p>Solo una pequeñísima parte del agua la podemos usar los seres humanos</p>
+            </div>
+          </div>
+          <div class="dato-item">
+            <span class="dato-icono">⏰</span>
+            <div class="dato-texto">
+              <strong>22 de marzo</strong>
+              <p>Es el Día Mundial del Agua. ¡Todos debemos celebrarlo cuidando cada gota!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="separador">
+      <div class="linea"></div>
+      <span class="gota">💧</span>
+      <div class="linea"></div>
+    </div>
+
+    <!-- CICLO DEL AGUA -->
+    <section class="seccion fondo-agua" id="ciclo">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">🔄</span>
+        El Ciclo del Agua
+      </div>
+      <p class="seccion-subtitulo">El agua viaja por todo el planeta en un ciclo que nunca se detiene</p>
+
+      <div class="imagen-educativa animar-entrada">
+        <img src="img/ciclo_agua.jpeg" alt="Ciclo del Agua">
+        <p>El ciclo del agua tiene 4 etapas: Evaporación, Condensación, Precipitación y Recolección</p>
+      </div>
+
+      <div class="tarjetas-grid" style="margin-top: 30px;">
+        <div class="tarjeta tarjeta-naranja animar-entrada">
+          <span class="icono-tarjeta">☀️</span>
+          <h3>Evaporación</h3>
+          <p>El sol calienta el agua de ríos, lagos y océanos, y la convierte en vapor que sube al cielo</p>
+        </div>
+        <div class="tarjeta tarjeta-turquesa animar-entrada">
+          <span class="icono-tarjeta">☁️</span>
+          <h3>Condensación</h3>
+          <p>El vapor de agua se enfría y forma las nubes en el cielo</p>
+        </div>
+        <div class="tarjeta animar-entrada">
+          <span class="icono-tarjeta">🌧️</span>
+          <h3>Precipitación</h3>
+          <p>Las nubes se llenan de agua y cae como lluvia, nieve o granizo</p>
+        </div>
+        <div class="tarjeta tarjeta-verde animar-entrada">
+          <span class="icono-tarjeta">🏞️</span>
+          <h3>Recolección</h3>
+          <p>El agua se junta de nuevo en ríos, lagos y océanos, ¡y el ciclo empieza otra vez!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADOS DEL AGUA -->
+    <section class="seccion" id="estados">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">🧊</span>
+        Los Estados del Agua
+      </div>
+      <p class="seccion-subtitulo">El agua puede cambiar de forma según la temperatura</p>
+
+      <div class="imagen-educativa animar-entrada">
+        <img src="img/estados_agua.png" alt="Estados del Agua">
+      </div>
+
+      <div class="tarjetas-grid" style="margin-top: 30px;">
+        <div class="tarjeta animar-entrada">
+          <span class="icono-tarjeta">🥤</span>
+          <h3>Líquido</h3>
+          <p>Es el agua que bebemos, con la que nos bañamos y regamos las plantas. ¡La forma más común!</p>
+        </div>
+        <div class="tarjeta tarjeta-turquesa animar-entrada">
+          <span class="icono-tarjeta">🧊</span>
+          <h3>Sólido</h3>
+          <p>Cuando el agua se congela se convierte en hielo. Esto pasa cuando hace mucho frío</p>
+        </div>
+        <div class="tarjeta tarjeta-naranja animar-entrada">
+          <span class="icono-tarjeta">♨️</span>
+          <h3>Gaseoso</h3>
+          <p>Cuando calentamos el agua, se convierte en vapor. ¡Como cuando hierve la tetera!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="separador">
+      <div class="linea"></div>
+      <span class="gota">💧</span>
+      <div class="linea"></div>
+    </div>
+
+    <!-- TIPS DE CUIDADO -->
+    <section class="seccion fondo-agua" id="tips">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">✅</span>
+        Tips de Cuidado del Agua en el Colegio
+      </div>
+      <p class="seccion-subtitulo">6 cosas fáciles que puedes hacer todos los días</p>
+
+      <div class="tips-grid">
+        <div class="tip-card animar-entrada">
+          <div class="tip-numero">1</div>
+          <h4>🚿 Cierra el caño</h4>
+          <p>Siempre cierra el caño mientras te enjabonas las manos. ¡No dejes correr el agua!</p>
+        </div>
+        <div class="tip-card animar-entrada">
+          <div class="tip-numero">2</div>
+          <h4>👀 Revisa las fugas</h4>
+          <p>Si ves un caño goteando, avisa a un profesor o al personal del colegio</p>
+        </div>
+        <div class="tip-card animar-entrada">
+          <div class="tip-numero">3</div>
+          <h4>🥤 Usa tu botella</h4>
+          <p>Lleva tu propia botella de agua reutilizable y evita desperdiciar</p>
+        </div>
+        <div class="tip-card animar-entrada">
+          <div class="tip-numero">4</div>
+          <h4>🌱 Riega con cuidado</h4>
+          <p>Si riegas las plantas del colegio, usa solo el agua necesaria</p>
+        </div>
+        <div class="tip-card animar-entrada">
+          <div class="tip-numero">5</div>
+          <h4>📢 Comparte el mensaje</h4>
+          <p>Recuérdale a tus compañeros la importancia de cuidar el agua</p>
+        </div>
+        <div class="tip-card animar-entrada">
+          <div class="tip-numero">6</div>
+          <h4>🚽 Tira la basura al tacho</h4>
+          <p>No arrojes residuos al inodoro o desagüe. Usa siempre el tacho de basura</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REUTILIZACIÓN DEL AGUA -->
+    <section class="seccion" id="reutilizacion">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">♻️</span>
+        Reutilización del Agua
+      </div>
+      <p class="seccion-subtitulo">El agua se puede usar más de una vez si somos inteligentes</p>
+
+      <div class="imagen-educativa animar-entrada">
+        <img src="img/reutilizacion.png" alt="Reutilización del agua">
+        <p>El agua de la ducha, lavabo y fregadero se puede almacenar, tratar y reutilizar para riego, limpieza y más
+        </p>
+      </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="separador">
+      <div class="linea"></div>
+      <span class="gota">💧</span>
+      <div class="linea"></div>
+    </div>
+
+    <!-- EVALUACIÓN Y CONSUMO -->
+    <section class="seccion fondo-agua" id="consumo">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">📊</span>
+        Evaluación del Consumo de Agua
+      </div>
+      <p class="seccion-subtitulo">Así ha sido el consumo de agua en nuestro colegio</p>
+
+      <div class="grafico-contenedor animar-entrada">
+        <div class="barras" id="grafico-barras">
+          <div class="barra-grupo">
+            <div class="barra barra-1" style="height: 0%" data-altura="33%">
+              <span class="barra-valor">223 m³</span>
+            </div>
+            <span class="barra-label">Enero</span>
+          </div>
+          <div class="barra-grupo">
+            <div class="barra barra-2" style="height: 0%" data-altura="33%">
+              <span class="barra-valor">223 m³</span>
+            </div>
+            <span class="barra-label">Febrero</span>
+          </div>
+          <div class="barra-grupo">
+            <div class="barra barra-3" style="height: 0%" data-altura="62%">
+              <span class="barra-valor">423 m³</span>
+            </div>
+            <span class="barra-label">Marzo</span>
+          </div>
+          <div class="barra-grupo">
+            <div class="barra barra-4" style="height: 0%" data-altura="96%">
+              <span class="barra-valor">653 m³</span>
+            </div>
+            <span class="barra-label">Abril</span>
+          </div>
+          <div class="barra-grupo">
+            <div class="barra barra-5" style="height: 0%" data-altura="100%">
+              <span class="barra-valor">680 m³</span>
+            </div>
+            <span class="barra-label">Mayo</span>
+          </div>
+        </div>
+        <p class="grafico-leyenda">📈 Consumo de agua en m³ - Meses del año</p>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="seccion" id="tecnologias">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">🔧</span>
+        Tecnologías para Cuidar el Agua
+      </div>
+      <p class="seccion-subtitulo">La tecnología nos ayuda a usar el agua de manera inteligente</p>
+
+      <div class="tech-grid">
+        <div class="tech-card animar-entrada">
+          <span class="tech-icono">📱</span>
+          <h4>Códigos QR</h4>
+          <p>Escanea y accede a información sobre el cuidado del agua desde tu celular</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <span class="tech-icono">🎥</span>
+          <h4>Videos Educativos</h4>
+          <p>Aprende de forma divertida con videos que te enseñan a cuidar cada gota</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <span class="tech-icono">📊</span>
+          <h4>Encuestas Digitales</h4>
+          <p>Comparte tu opinión sobre cómo se usa el agua en tu colegio</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <span class="tech-icono">🎮</span>
+          <h4>Juegos Interactivos</h4>
+          <p>Aprende jugando con trivia, sopa de letras y más actividades divertidas</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <span class="tech-icono">🌐</span>
+          <h4>Página Web</h4>
+          <p>¡Esta misma página! Un manual digital que puedes ver desde cualquier dispositivo</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <span class="tech-icono">💡</span>
+          <h4>Sensores de Agua</h4>
+          <p>Dispositivos que detectan fugas y ayudan a ahorrar agua automáticamente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSIONES -->
+    <section class="seccion fondo-agua" id="conclusiones">
+      <div class="seccion-titulo">
+        <span class="emoji-titulo">🌟</span>
+        Conclusiones
+      </div>
+
+      <div class="tarjetas-grid">
+        <div class="tarjeta animar-entrada" style="text-align: center;">
+          <span class="icono-tarjeta">🤝</span>
+          <h3>Todos podemos ayudar</h3>
+          <p>Cada pequeña acción cuenta. Si todos cuidamos el agua, haremos una gran diferencia para nuestro planeta</p>
+        </div>
+        <div class="tarjeta tarjeta-verde animar-entrada" style="text-align: center;">
+          <span class="icono-tarjeta">📚</span>
+          <h3>La educación es clave</h3>
+          <p>Aprender sobre el agua nos ayuda a tomar mejores decisiones. ¡Comparte lo que aprendiste con tu familia!
+          </p>
+        </div>
+        <div class="tarjeta tarjeta-turquesa animar-entrada" style="text-align: center;">
+          <span class="icono-tarjeta">🌱</span>
+          <h3>El futuro está en nuestras manos</h3>
+          <p>La tecnología y la creatividad nos dan herramientas para cuidar el agua y proteger las futuras generaciones
+          </p>
+        </div>
+      </div>
+
+      <div class="imagen-educativa animar-entrada" style="margin-top: 30px;">
+        <img src="img/equipo.jpeg" alt="Equipo de estudiantes" style="max-width: 400px;">
+        <p>¡Juntos cuidamos cada gota! 💧</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA: ENCUESTA                           -->
+  <!-- ========================================== -->
+  <div id="pagina-encuesta" class="pagina">
+    <div class="encuesta-container">
+      <div class="encuesta-header">
+        <h1>📋 Encuesta sobre el Uso del Agua</h1>
+        <p>Marca la respuesta que consideres correcta. ¡Tu opinión es muy importante!</p>
+      </div>
+
+      <form id="form-encuesta">
+        <!-- Pregunta 1 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">1</span>
+            ¿Cierras el caño después de lavarte las manos?
+          </h3>
+          <div class="opciones">
+            <div class="opcion" id="opcion-p1-1">
+              <input type="radio" name="p1" id="p1-siempre" value="Siempre">
+              <label for="p1-siempre">Siempre</label>
+            </div>
+            <div class="opcion" id="opcion-p1-2">
+              <input type="radio" name="p1" id="p1-aveces" value="A veces">
+              <label for="p1-aveces">A veces</label>
+            </div>
+            <div class="opcion" id="opcion-p1-3">
+              <input type="radio" name="p1" id="p1-nunca" value="Nunca">
+              <label for="p1-nunca">Nunca</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">2</span>
+            ¿Has visto algún caño goteando o con fugas en la escuela?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p2" id="p2-si" value="Sí">
+              <label for="p2-si">Sí</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p2" id="p2-no" value="No">
+              <label for="p2-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">3</span>
+            Cuando te lavas las manos, ¿dejas correr el agua mientras te enjabonas?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p3" id="p3-siempre" value="Siempre">
+              <label for="p3-siempre">Siempre</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p3" id="p3-aveces" value="A veces">
+              <label for="p3-aveces">A veces</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p3" id="p3-nunca" value="Nunca">
+              <label for="p3-nunca">Nunca</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">4</span>
+            ¿Crees que el agua es importante para mantener limpia la escuela?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p4" id="p4-si" value="Sí">
+              <label for="p4-si">Sí</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p4" id="p4-no" value="No">
+              <label for="p4-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">5</span>
+            ¿Conoces alguna forma de ahorrar agua en la escuela?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p5" id="p5-si" value="Sí">
+              <label for="p5-si">Sí</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p5" id="p5-no" value="No">
+              <label for="p5-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">6</span>
+            Si ves que alguien desperdicia agua, ¿qué haces?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p6" id="p6-recuerdo" value="Le recuerdo que debe cuidarla">
+              <label for="p6-recuerdo">Le recuerdo que debe cuidarla</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p6" id="p6-aviso" value="Aviso a un profesor">
+              <label for="p6-aviso">Aviso a un profesor</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p6" id="p6-nada" value="No hago nada">
+              <label for="p6-nada">No hago nada</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">7</span>
+            ¿Participarías en actividades para cuidar el agua en la escuela?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p7" id="p7-si" value="Sí">
+              <label for="p7-si">Sí</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p7" id="p7-talvez" value="Tal vez">
+              <label for="p7-talvez">Tal vez</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p7" id="p7-no" value="No">
+              <label for="p7-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">8</span>
+            ¿Consideras que en la escuela se usa el agua de manera responsable?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p8" id="p8-si" value="Sí">
+              <label for="p8-si">Sí</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p8" id="p8-aveces" value="A veces">
+              <label for="p8-aveces">A veces</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p8" id="p8-no" value="No">
+              <label for="p8-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">9</span>
+            ¿Te gustaría aprender más sobre el cuidado del agua mediante videos y actividades interactivas?
+          </h3>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p9" id="p9-si" value="Sí">
+              <label for="p9-si">Sí</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p9" id="p9-no" value="No">
+              <label for="p9-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 10 - Abierta -->
+        <div class="pregunta-card animar-entrada">
+          <h3>
+            <span class="pregunta-numero">10</span>
+            Escribe una acción que puedas realizar para ahorrar agua en la escuela:
+          </h3>
+          <textarea class="campo-texto" name="p10" id="p10" placeholder="Escribe tu respuesta aquí... ✍️"></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar" id="btn-enviar-encuesta">
+          ✉️ Enviar Encuesta
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA: VIDEOS                             -->
+  <!-- ========================================== -->
+  <div id="pagina-videos" class="pagina">
+    <div class="videos-container">
+      <div class="encuesta-header">
+        <h1>🎬 Videos Educativos</h1>
+        <p>Mira estos videos para aprender más sobre el cuidado del agua</p>
+      </div>
+
+      <div class="imagen-educativa">
+        <img src="img/cuidemos_agua.png" alt="¡Cuidemos el agua!" style="max-width: 300px;">
+      </div>
+
+      <div class="videos-grid">
+        <div class="video-card animar-entrada">
+          <div class="video-placeholder">
+            <div class="play-icon">▶️</div>
+            <p>Video próximamente</p>
+          </div>
+          <div class="video-info">
+            <h4>💧 El Ciclo del Agua</h4>
+            <p>Aprende cómo el agua viaja por nuestro planeta</p>
+          </div>
+        </div>
+
+        <div class="video-card animar-entrada">
+          <div class="video-placeholder">
+            <div class="play-icon">▶️</div>
+            <p>Video próximamente</p>
+          </div>
+          <div class="video-info">
+            <h4>🚰 Cómo Ahorrar Agua</h4>
+            <p>Tips y trucos para gastar menos agua cada día</p>
+          </div>
+        </div>
+
+        <div class="video-card animar-entrada">
+          <div class="video-placeholder">
+            <div class="play-icon">▶️</div>
+            <p>Video próximamente</p>
+          </div>
+          <div class="video-info">
+            <h4>🌍 La Importancia del Agua</h4>
+            <p>Descubre por qué el agua es vital para la vida</p>
+          </div>
+        </div>
+
+        <div class="video-card animar-entrada">
+          <div class="video-placeholder">
+            <div class="play-icon">▶️</div>
+            <p>Video próximamente</p>
+          </div>
+          <div class="video-info">
+            <h4>🔬 Tecnologías del Agua</h4>
+            <p>Conoce las tecnologías que nos ayudan a cuidar el agua</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="text-align: center; margin-top: 30px; padding: 25px; background: var(--blanco); border-radius: 20px; box-shadow: 0 6px 20px rgba(27,58,92,0.15);">
+        <p style="font-family: 'Baloo 2', cursive; font-size: 1.2rem; color: #1B3A5C;">
+          🔜 ¡Pronto agregaremos los videos!<br>
+          <span style="font-size: 1rem; color: #5a7a9a;">La tecnología nos ayuda a usar el agua de manera inteligente y
+            a cuidar cada gota para las futuras generaciones</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA: JUEGOS                             -->
+  <!-- ========================================== -->
+  <div id="pagina-juegos" class="pagina">
+    <div class="juegos-container">
+      <div class="encuesta-header">
+        <h1>🎮 ¡Explora, Juega y Aprende!</h1>
+        <p>Pon a prueba lo que sabes sobre el cuidado del agua</p>
+      </div>
+
+      <div class="juego-seleccion">
+        <div class="juego-btn activo" id="btn-trivia" data-juego="trivia">
+          <span class="juego-emoji">🧠</span>
+          <span>Trivia del Agua</span>
+        </div>
+        <div class="juego-btn" id="btn-sopa" data-juego="sopa">
+          <span class="juego-emoji">🔤</span>
+          <span>Sopa de Letras</span>
+        </div>
+        <div class="juego-btn" id="btn-ordenar" data-juego="ordenar">
+          <span class="juego-emoji">🔢</span>
+          <span>Ordena los Pasos</span>
+        </div>
+        <div class="juego-btn" id="btn-memoria" data-juego="memoria">
+          <span class="juego-emoji">🃏</span>
+          <span>Memoria</span>
+        </div>
+      </div>
+
+      <!-- Área de juego - se llena con JavaScript -->
+      <div class="juego-area" id="juego-area">
+        <!-- El contenido se carga dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MODAL DE ÉXITO ========== -->
+  <div class="modal-overlay" id="modal-exito">
+    <div class="modal-contenido">
+      <span class="emoji-modal">🎉</span>
+      <h3>¡Gracias por participar!</h3>
+      <p>Tu encuesta ha sido enviada. ¡Juntos cuidamos el agua! 💧</p>
+      <button class="btn-cerrar-modal" id="btn-cerrar-modal">¡Genial! 👍</button>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <img src="img/gotita.png" alt="Gotita">
+        <span>💧 Cuidemos el Agua</span>
+      </div>
+      <p>Proyecto escolar - Innova Schools</p>
+      <p>Hecho con <span class="corazon">❤️</span> por estudiantes comprometidos con el medio ambiente</p>
+      <p style="margin-top: 10px; opacity: 0.6;">© 2025 - Manual Interactivo del Cuidado del Agua</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
