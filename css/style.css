@@ -1466,3 +1466,107 @@ body {
 .pagina.activa {
   display: block;
 }
+
+/* GR�FICO CONSUMO PERSONALIZADO (IMAGEN REFERENCIA) */
+.grafico-consumo-container { background: #FFFFFF; border-radius: 30px; border: 2px solid #1B3A5C; padding: 40px; text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+.grafico-titulo { font-family: 'Baloo 2', cursive; font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 30px; letter-spacing: 0.5px; }
+.grafico-centro { display: flex; justify-content: center; margin-bottom: 20px; }
+.grafico-centro img { max-width: 350px; }
+.barras-consumo { display: flex; max-width: 500px; margin: 0 auto; height: 250px; position: relative; }
+.eje-y { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; padding-right: 10px; font-weight: 600; color: #666; position: relative; border-right: 2px solid #ccc; font-size: 0.9rem; }
+.label-y { position: absolute; left: -90px; top: 50%; transform: translateY(-50%) rotate(-90deg); font-family: 'Baloo 2', cursive; font-weight: 700; color: #1B3A5C; font-size: 1.2rem; white-space: nowrap; }
+.barras-area { display: flex; align-items: flex-end; justify-content: space-around; flex: 1; border-bottom: 2px solid #ccc; padding: 0 10px; gap: 10px; }
+.barra-grupo { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; position: relative; width: 40px; }
+.barra { width: 30px; border-radius: 2px 2px 0 0; }
+.barra-valor { font-family: 'Baloo 2', cursive; font-weight: 700; margin-bottom: 5px; font-size: 1.1rem; }
+.barra-1 { background-color: #26C6DA; }
+.barra-2 { background-color: #26C6DA; }
+.barra-3 { background-color: #03A9F4; }
+.barra-4 { background-color: #3949AB; }
+.barra-5 { background-color: #001A4D; }
+.barra-label { position: absolute; bottom: -25px; font-family: 'Quicksand', sans-serif; font-size: 0.85rem; color: #333; font-weight: bold; }
+.label-x { font-family: 'Baloo 2', cursive; font-weight: 800; color: #FFD54F; font-size: 1.3rem; margin-top: 35px; }
+.fuente-datos { font-size: 0.85rem; color: #333; margin-top: 15px; }
+
+/* CONCLUSIONES */
+.conclusiones-lista { display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto; }
+.conclusion-item { display: flex; align-items: flex-start; gap: 15px; background: var(--blanco); padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.gota-icon { font-size: 1.8rem; line-height: 1; }
+.conclusion-item p { margin: 0; font-size: 1.1rem; font-weight: 500; color: var(--azul-oscuro); }
+
+
+/* ============================================
+   CORRECCIONES Y MEJORAS - INICIO
+   ============================================ */
+
+/* 1. Fondo-agua full-width: la seccion se expande al 100%
+      pero el contenido queda centrado (max 960px) */
+.seccion.fondo-agua {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: max(20px, calc((100% - 960px) / 2));
+  padding-right: max(20px, calc((100% - 960px) / 2));
+}
+
+/* 2. Problemática: layout dos columnas */
+.problema-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 5px;
+}
+
+.problema-col {
+  background: var(--blanco);
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px var(--sombra);
+}
+
+.problema-col h3 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.problema-col-problema {
+  border-top: 6px solid #EF5350;
+}
+
+.problema-col-problema h3 {
+  color: #C62828;
+}
+
+.problema-col-solucion {
+  border-top: 6px solid #66BB6A;
+}
+
+.problema-col-solucion h3 {
+  color: #2E7D32;
+}
+
+@media (max-width: 640px) {
+  .problema-columnas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 3. Ciclo del agua: grid 2x2 fijo */
+.tarjetas-2x2 {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+@media (max-width: 480px) {
+  .tarjetas-2x2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 4. Tecnologías: emoji como icono */
+.tech-emoji {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 15px;
+  display: block;
+}

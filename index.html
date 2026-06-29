@@ -67,21 +67,24 @@
       <p class="seccion-subtitulo">Descubrimos problemas con el uso del agua en nuestro colegio</p>
 
       <div class="problema-contenido animar-entrada">
-        <img src="img/problematica.png" alt="Problemática identificada">
-        <div class="problema-texto">
-          <h3>¿Qué problema encontramos?</h3>
-          <ul class="problema-lista">
-            <li>Algunos dejan los caños abiertos mientras se lavan las manos</li>
-            <li>Otros no cierran bien los caños después de usarlos</li>
-            <li>Hay alumnos que no saben por qué el agua es tan importante para la vida</li>
-          </ul>
-          <h3 style="margin-top: 20px;">¿Qué solución proponemos?</h3>
-          <ul class="problema-lista">
-            <li>Crear un manual interactivo con código QR</li>
-            <li>Videos educativos sobre el cuidado del agua</li>
-            <li>Encuestas divertidas para crear conciencia</li>
-            <li>Juegos para aprender jugando</li>
-          </ul>
+        <div class="problema-columnas">
+          <div class="problema-col problema-col-problema">
+            <h3>🔍 ¿Qué problema encontramos?</h3>
+            <ul class="problema-lista">
+              <li>Algunos dejan los caños abiertos mientras se lavan las manos</li>
+              <li>Otros no cierran bien los caños después de usarlos</li>
+              <li>Hay alumnos que no saben por qué el agua es tan importante para la vida</li>
+            </ul>
+          </div>
+          <div class="problema-col problema-col-solucion">
+            <h3>💡 ¿Qué solución proponemos?</h3>
+            <ul class="problema-lista">
+              <li>Crear un manual interactivo con código QR</li>
+              <li>Videos educativos sobre el cuidado del agua</li>
+              <li>Encuestas divertidas para crear conciencia</li>
+              <li>Juegos para aprender jugando</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -151,12 +154,8 @@
       </div>
       <p class="seccion-subtitulo">El agua viaja por todo el planeta en un ciclo que nunca se detiene</p>
 
-      <div class="imagen-educativa animar-entrada">
-        <img src="img/ciclo_agua.jpeg" alt="Ciclo del Agua">
-        <p>El ciclo del agua tiene 4 etapas: Evaporación, Condensación, Precipitación y Recolección</p>
-      </div>
-
-      <div class="tarjetas-grid" style="margin-top: 30px;">
+      <p class="seccion-subtitulo" style="margin-bottom:25px;">El ciclo del agua tiene 4 etapas: Evaporación, Condensación, Precipitación y Recolección</p>
+      <div class="tarjetas-grid tarjetas-2x2" style="margin-top: 10px;">
         <div class="tarjeta tarjeta-naranja animar-entrada">
           <span class="icono-tarjeta">☀️</span>
           <h3>Evaporación</h3>
@@ -188,11 +187,7 @@
       </div>
       <p class="seccion-subtitulo">El agua puede cambiar de forma según la temperatura</p>
 
-      <div class="imagen-educativa animar-entrada">
-        <img src="img/estados_agua.png" alt="Estados del Agua">
-      </div>
-
-      <div class="tarjetas-grid" style="margin-top: 30px;">
+      <div class="tarjetas-grid" style="margin-top: 10px;">
         <div class="tarjeta animar-entrada">
           <span class="icono-tarjeta">🥤</span>
           <h3>Líquido</h3>
@@ -250,7 +245,7 @@
         <div class="tip-card animar-entrada">
           <div class="tip-numero">5</div>
           <h4>📢 Comparte el mensaje</h4>
-          <p>Recuérdale a tus compañeros la importancia de cuidar el agua</p>
+          <p>Cuéntales a tus compañeros por qué es importante cuidar el agua cada día</p>
         </div>
         <div class="tip-card animar-entrada">
           <div class="tip-numero">6</div>
@@ -260,18 +255,88 @@
       </div>
     </section>
 
-    <!-- REUTILIZACIÓN DEL AGUA -->
-    <section class="seccion" id="reutilizacion">
+    <!-- TECNOLOGÍAS -->
+    <section class="seccion" id="tecnologias">
       <div class="seccion-titulo">
-        <span class="emoji-titulo">♻️</span>
-        Reutilización del Agua
+        <span class="emoji-titulo">💡</span>
+        Tecnologías para Cuidar el Agua
       </div>
-      <p class="seccion-subtitulo">El agua se puede usar más de una vez si somos inteligentes</p>
+      <p class="seccion-subtitulo">La tecnología nos ayuda a usar el agua de manera inteligente</p>
 
-      <div class="imagen-educativa animar-entrada">
-        <img src="img/reutilizacion.png" alt="Reutilización del agua">
-        <p>El agua de la ducha, lavabo y fregadero se puede almacenar, tratar y reutilizar para riego, limpieza y más
-        </p>
+      <div class="tech-grid">
+        <div class="tech-card animar-entrada">
+          <div class="tech-emoji">🚿</div>
+          <h3>Caños con sensor</h3>
+          <p>Permiten que el agua salga únicamente cuando las manos se acercan, evitando que queden abiertos innecesariamente.</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <div class="tech-emoji">🚽</div>
+          <h3>Inodoros de doble descarga</h3>
+          <p>Al elegir entre descargas completas o parciales se disminuye hasta en un 60% el uso de agua en comparación con las cisternas tradicionales.</p>
+        </div>
+        <div class="tech-card animar-entrada">
+          <img src="img/reutilizacion.png" alt="Reutilización del agua" style="width: 80px; height: 80px; margin-bottom: 15px;">
+          <h3>Reutilización del agua</h3>
+          <p>Permite aprovechar el agua proveniente de duchas, lavamanos, bebederos, etc. para el riego de jardines o limpieza.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVALUACIÓN Y CONSUMO -->
+    <section class="seccion" id="consumo">
+      <div class="grafico-consumo-container animar-entrada">
+        <h2 class="grafico-titulo">
+          <span style="color: #03A9F4;">EL CONSUMO</span> <span style="color: #26C6DA;">DEL</span> <span style="color: #1A237E;">AGUA</span><br>
+          <span style="color: #7B1FA2;">EN</span> <span style="color: #FFC107;">INNOVA</span> <span style="color: #4CAF50;">SCHOOL</span> <span style="color: #03A9F4;">CANTA CALLAO</span>
+        </h2>
+        
+        <div class="grafico-centro">
+          <img src="img/gota_mundo.png" alt="Gota de agua en el mundo" style="max-width: 200px; height: auto;">
+        </div>
+
+        <div class="barras-consumo">
+          <div class="eje-y">
+            <span>800</span>
+            <span>700</span>
+            <span>600</span>
+            <span>500</span>
+            <span>400</span>
+            <span>300</span>
+            <span>200</span>
+            <span>100</span>
+            <span>0</span>
+            <div class="label-y">Consumo de agua m³</div>
+          </div>
+          <div class="barras-area">
+            <div class="barra-grupo">
+              <span class="barra-valor" style="color: #1976D2;">223</span>
+              <div class="barra barra-1" style="height: 27%;"></div>
+              <span class="barra-label">Enero</span>
+            </div>
+            <div class="barra-grupo">
+              <span class="barra-valor" style="color: #1976D2;">223</span>
+              <div class="barra barra-2" style="height: 27%;"></div>
+              <span class="barra-label">Febrero</span>
+            </div>
+            <div class="barra-grupo">
+              <span class="barra-valor" style="color: #1976D2;">423</span>
+              <div class="barra barra-3" style="height: 52%;"></div>
+              <span class="barra-label">Marzo</span>
+            </div>
+            <div class="barra-grupo">
+              <span class="barra-valor" style="color: #1976D2;">653</span>
+              <div class="barra barra-4" style="height: 81%;"></div>
+              <span class="barra-label">Abril</span>
+            </div>
+            <div class="barra-grupo">
+              <span class="barra-valor" style="color: #1976D2;">680</span>
+              <div class="barra barra-5" style="height: 85%;"></div>
+              <span class="barra-label">Mayo</span>
+            </div>
+          </div>
+        </div>
+        <div class="label-x">Meses del año</div>
+        <p class="fuente-datos"><strong>Fuente:</strong> Marco Paz – Coordinador de operaciones y administración</p>
       </div>
     </section>
 
@@ -282,93 +347,6 @@
       <div class="linea"></div>
     </div>
 
-    <!-- EVALUACIÓN Y CONSUMO -->
-    <section class="seccion fondo-agua" id="consumo">
-      <div class="seccion-titulo">
-        <span class="emoji-titulo">📊</span>
-        Evaluación del Consumo de Agua
-      </div>
-      <p class="seccion-subtitulo">Así ha sido el consumo de agua en nuestro colegio</p>
-
-      <div class="grafico-contenedor animar-entrada">
-        <div class="barras" id="grafico-barras">
-          <div class="barra-grupo">
-            <div class="barra barra-1" style="height: 0%" data-altura="33%">
-              <span class="barra-valor">223 m³</span>
-            </div>
-            <span class="barra-label">Enero</span>
-          </div>
-          <div class="barra-grupo">
-            <div class="barra barra-2" style="height: 0%" data-altura="33%">
-              <span class="barra-valor">223 m³</span>
-            </div>
-            <span class="barra-label">Febrero</span>
-          </div>
-          <div class="barra-grupo">
-            <div class="barra barra-3" style="height: 0%" data-altura="62%">
-              <span class="barra-valor">423 m³</span>
-            </div>
-            <span class="barra-label">Marzo</span>
-          </div>
-          <div class="barra-grupo">
-            <div class="barra barra-4" style="height: 0%" data-altura="96%">
-              <span class="barra-valor">653 m³</span>
-            </div>
-            <span class="barra-label">Abril</span>
-          </div>
-          <div class="barra-grupo">
-            <div class="barra barra-5" style="height: 0%" data-altura="100%">
-              <span class="barra-valor">680 m³</span>
-            </div>
-            <span class="barra-label">Mayo</span>
-          </div>
-        </div>
-        <p class="grafico-leyenda">📈 Consumo de agua en m³ - Meses del año</p>
-      </div>
-    </section>
-
-    <!-- TECNOLOGÍAS -->
-    <section class="seccion" id="tecnologias">
-      <div class="seccion-titulo">
-        <span class="emoji-titulo">🔧</span>
-        Tecnologías para Cuidar el Agua
-      </div>
-      <p class="seccion-subtitulo">La tecnología nos ayuda a usar el agua de manera inteligente</p>
-
-      <div class="tech-grid">
-        <div class="tech-card animar-entrada">
-          <span class="tech-icono">📱</span>
-          <h4>Códigos QR</h4>
-          <p>Escanea y accede a información sobre el cuidado del agua desde tu celular</p>
-        </div>
-        <div class="tech-card animar-entrada">
-          <span class="tech-icono">🎥</span>
-          <h4>Videos Educativos</h4>
-          <p>Aprende de forma divertida con videos que te enseñan a cuidar cada gota</p>
-        </div>
-        <div class="tech-card animar-entrada">
-          <span class="tech-icono">📊</span>
-          <h4>Encuestas Digitales</h4>
-          <p>Comparte tu opinión sobre cómo se usa el agua en tu colegio</p>
-        </div>
-        <div class="tech-card animar-entrada">
-          <span class="tech-icono">🎮</span>
-          <h4>Juegos Interactivos</h4>
-          <p>Aprende jugando con trivia, sopa de letras y más actividades divertidas</p>
-        </div>
-        <div class="tech-card animar-entrada">
-          <span class="tech-icono">🌐</span>
-          <h4>Página Web</h4>
-          <p>¡Esta misma página! Un manual digital que puedes ver desde cualquier dispositivo</p>
-        </div>
-        <div class="tech-card animar-entrada">
-          <span class="tech-icono">💡</span>
-          <h4>Sensores de Agua</h4>
-          <p>Dispositivos que detectan fugas y ayudan a ahorrar agua automáticamente</p>
-        </div>
-      </div>
-    </section>
-
     <!-- CONCLUSIONES -->
     <section class="seccion fondo-agua" id="conclusiones">
       <div class="seccion-titulo">
@@ -376,23 +354,22 @@
         Conclusiones
       </div>
 
-      <div class="tarjetas-grid">
-        <div class="tarjeta animar-entrada" style="text-align: center;">
-          <span class="icono-tarjeta">🤝</span>
-          <h3>Todos podemos ayudar</h3>
-          <p>Cada pequeña acción cuenta. Si todos cuidamos el agua, haremos una gran diferencia para nuestro planeta</p>
+      <div class="conclusiones-lista animar-entrada">
+        <div class="conclusion-item">
+          <span class="gota-icon">💧</span>
+          <p>El agua es un recurso vital que debemos cuidar y utilizar de manera responsable.</p>
         </div>
-        <div class="tarjeta tarjeta-verde animar-entrada" style="text-align: center;">
-          <span class="icono-tarjeta">📚</span>
-          <h3>La educación es clave</h3>
-          <p>Aprender sobre el agua nos ayuda a tomar mejores decisiones. ¡Comparte lo que aprendiste con tu familia!
-          </p>
+        <div class="conclusion-item">
+          <span class="gota-icon">💧</span>
+          <p>Las encuestas y observaciones nos permitieron identificar que es necesario crear conciencia y promover hábitos para evitar el desperdicio del agua en nuestra escuela.</p>
         </div>
-        <div class="tarjeta tarjeta-turquesa animar-entrada" style="text-align: center;">
-          <span class="icono-tarjeta">🌱</span>
-          <h3>El futuro está en nuestras manos</h3>
-          <p>La tecnología y la creatividad nos dan herramientas para cuidar el agua y proteger las futuras generaciones
-          </p>
+        <div class="conclusion-item">
+          <span class="gota-icon">💧</span>
+          <p>La tecnología, mediante actividades interactivas, nos ayuda a aprender de manera más divertida y dinámica.</p>
+        </div>
+        <div class="conclusion-item">
+          <span class="gota-icon">💧</span>
+          <p>El registro y seguimiento del consumo del agua permitirá evaluar si las acciones propuestas mejoran los hábitos de ahorro y conservación del agua.</p>
         </div>
       </div>
 
@@ -739,7 +716,7 @@
       </div>
       <p>Proyecto escolar - Innova Schools</p>
       <p>Hecho con <span class="corazon">❤️</span> por estudiantes comprometidos con el medio ambiente</p>
-      <p style="margin-top: 10px; opacity: 0.6;">© 2025 - Manual Interactivo del Cuidado del Agua</p>
+      <p style="margin-top: 10px; opacity: 0.6;">© 2026 - Manual Interactivo del Cuidado del Agua</p>
     </div>
   </footer>
 
