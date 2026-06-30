@@ -1216,70 +1216,6 @@ body {
 }
 
 /* ============================================
-   MODAL DE ÉXITO
-   ============================================ */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 2000;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-overlay.visible {
-  display: flex;
-}
-
-.modal-contenido {
-  background: var(--blanco);
-  border-radius: var(--radio-borde);
-  padding: 40px;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-  animation: aparecer 0.4s ease-out;
-}
-
-.modal-contenido .emoji-modal {
-  font-size: 4rem;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.modal-contenido h3 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.5rem;
-  color: var(--azul-oscuro);
-  margin-bottom: 10px;
-}
-
-.modal-contenido p {
-  color: #5a7a9a;
-  margin-bottom: 20px;
-}
-
-.btn-cerrar-modal {
-  padding: 10px 30px;
-  background: linear-gradient(135deg, var(--azul-nav), var(--turquesa));
-  color: var(--blanco);
-  border: none;
-  border-radius: var(--radio-boton);
-  font-family: 'Baloo 2', cursive;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.btn-cerrar-modal:hover {
-  transform: scale(1.05);
-}
-
-/* ============================================
    FONDO CON PATRÓN DE AGUA
    ============================================ */
 .fondo-agua {
@@ -1458,6 +1394,17 @@ body {
   }
 }
 
+/* Ocultar elementos temporalmente sin eliminarlos */
+.oculto-temporal {
+  display: none !important;
+}
+
+/* Mientras el hero está oculto, separar la Bienvenida del navbar fijo.
+   Quitar este margen cuando se vuelva a mostrar el hero. */
+.hero.oculto-temporal + #bienvenida {
+  margin-top: 70px;
+}
+
 /* Ocultar/mostrar páginas */
 .pagina {
   display: none;
@@ -1467,7 +1414,7 @@ body {
   display: block;
 }
 
-/* GR�FICO CONSUMO PERSONALIZADO (IMAGEN REFERENCIA) */
+/* GR�FICO CONSUMO PERSONALIZADO (IMAGEN REFERENCIA) */
 .grafico-consumo-container { background: #FFFFFF; border-radius: 30px; border: 2px solid #1B3A5C; padding: 40px; text-align: center; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
 .grafico-titulo { font-family: 'Baloo 2', cursive; font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 30px; letter-spacing: 0.5px; }
 .grafico-centro { display: flex; justify-content: center; margin-bottom: 20px; }
@@ -1569,4 +1516,358 @@ body {
   line-height: 1;
   margin-bottom: 15px;
   display: block;
+}
+
+/* ============================================
+   AJUSTES NUEVOS (feedback de padres)
+   ============================================ */
+
+/* --- BIENVENIDA --- */
+.bienvenida-contenido {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bienvenida-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.bienvenida-titulo {
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.4rem;
+  color: var(--azul-oscuro);
+  margin-bottom: 10px;
+}
+
+.bienvenida-saludo {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  color: var(--azul-nav);
+  margin-bottom: 15px;
+}
+
+.bienvenida-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.bienvenida-final {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.3rem;
+  color: var(--turquesa);
+  margin-top: 12px !important;
+}
+
+.bienvenida-imagen {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.bienvenida-imagen img {
+  max-width: 420px;
+  width: 100%;
+}
+
+/* --- OBJETIVOS --- */
+.objetivo-general {
+  background: linear-gradient(135deg, var(--azul-nav), var(--turquesa));
+  color: var(--blanco);
+  border-radius: var(--radio-borde);
+  padding: 28px 32px;
+  text-align: center;
+  box-shadow: 0 8px 25px var(--sombra);
+  max-width: 760px;
+  margin: 0 auto 35px;
+}
+
+.objetivo-general h3 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.objetivo-general p {
+  font-size: 1.1rem;
+}
+
+.objetivos-subtitulo {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.4rem;
+  color: var(--azul-oscuro);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.objetivos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.objetivo-card {
+  background: var(--blanco);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px var(--sombra);
+  border-left: 5px solid var(--turquesa);
+  transition: transform 0.2s ease;
+}
+
+.objetivo-card:hover {
+  transform: translateY(-4px);
+}
+
+.objetivo-icono {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.objetivo-card p {
+  font-size: 1rem;
+  color: var(--azul-oscuro);
+  font-weight: 500;
+}
+
+/* --- VIDEOS: embeds responsivos --- */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #E3F2FD;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videos-nota {
+  text-align: center;
+  margin-top: 30px;
+  padding: 25px;
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px var(--sombra);
+}
+
+.videos-nota p {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+  color: var(--azul-oscuro);
+}
+
+.videos-nota span {
+  font-size: 1rem;
+  color: #5a7a9a;
+  font-weight: normal;
+}
+
+/* --- RESULTADOS ENCUESTA: tabla en el home --- */
+.resultados-cargando,
+.resultados-vacio {
+  text-align: center;
+  color: #5a7a9a;
+  font-size: 1.1rem;
+  padding: 20px;
+}
+
+.resultados-total-home {
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+  color: var(--azul-nav);
+  margin-bottom: 18px;
+}
+
+.tabla-resultados-scroll {
+  overflow-x: auto;
+}
+
+.tabla-resultados {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanco);
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  box-shadow: 0 8px 25px var(--sombra);
+}
+
+.tabla-resultados th,
+.tabla-resultados td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e8f0;
+  font-size: 0.98rem;
+}
+
+.tabla-resultados th {
+  background: linear-gradient(135deg, var(--azul-nav), var(--turquesa));
+  color: var(--blanco);
+  font-family: 'Baloo 2', cursive;
+}
+
+.tabla-resultados td:last-child,
+.tabla-resultados th:last-child {
+  text-align: center;
+  font-weight: 700;
+  color: var(--azul-nav);
+}
+
+.tabla-resultados tr:nth-child(even) td {
+  background: var(--gris-claro);
+}
+
+.tabla-resultados tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- RESULTADOS ENCUESTA: gráficas al terminar --- */
+.encuesta-resultados {
+  display: none;
+  animation: aparecer 0.5s ease-out;
+}
+
+.encuesta-resultados.visible {
+  display: block;
+}
+
+.resultados-cabecera {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.resultados-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.resultados-cabecera h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.8rem;
+  color: var(--azul-oscuro);
+  margin-bottom: 8px;
+}
+
+.resultados-cabecera p {
+  color: #5a7a9a;
+}
+
+.resultados-total {
+  font-family: 'Baloo 2', cursive;
+  color: var(--azul-nav) !important;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.resultado-pregunta {
+  background: var(--blanco);
+  border-radius: 15px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px var(--sombra);
+  border-left: 5px solid var(--azul-medio);
+}
+
+.resultado-pregunta h4 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.05rem;
+  color: var(--azul-oscuro);
+  margin-bottom: 14px;
+}
+
+.barra-resultado-fila {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.barra-resultado-label {
+  flex: 0 0 130px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--azul-oscuro);
+  text-align: right;
+}
+
+.barra-resultado-pista {
+  flex: 1;
+  background: #E3F2FD;
+  border-radius: 10px;
+  height: 26px;
+  overflow: hidden;
+}
+
+.barra-resultado-relleno {
+  height: 100%;
+  background: linear-gradient(90deg, var(--turquesa), var(--azul-nav));
+  border-radius: 10px;
+  color: var(--blanco);
+  font-family: 'Baloo 2', cursive;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  min-width: 0;
+  transition: width 0.8s ease-out;
+  box-sizing: border-box;
+}
+
+.barra-resultado-num {
+  flex: 0 0 36px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 0.85rem;
+  color: var(--azul-nav);
+}
+
+@media (max-width: 480px) {
+  .barra-resultado-label {
+    flex-basis: 90px;
+    font-size: 0.8rem;
+  }
+}
+
+/* --- DESPEDIDA --- */
+.despedida-card {
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+  border-radius: var(--radio-borde);
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px var(--sombra);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.despedida-corazon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.despedida-card p {
+  font-size: 1.15rem;
+  color: var(--azul-oscuro);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.despedida-frase {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.4rem;
+  color: var(--azul-nav);
+  margin-top: 12px !important;
 }

@@ -142,15 +142,18 @@ var formEncuesta = document.getElementById('form-encuesta');
 if (formEncuesta) {
   formEncuesta.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     // Verificar que todas las preguntas estén respondidas
     var preguntas = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9'];
+    var respuestas = {};
     var todasRespondidas = true;
-    
+
     preguntas.forEach(function(p) {
       var respuesta = document.querySelector('input[name="' + p + '"]:checked');
       if (!respuesta) {
         todasRespondidas = false;
+      } else {
+        respuestas[p] = respuesta.value;
       }
     });
 
@@ -159,21 +162,51 @@ if (formEncuesta) {
       return;
     }
 
-    // Mostrar modal de éxito
-    document.getElementById('modal-exito').classList.add('visible');
+    // Evitar doble envío mientras guarda
+    var btnEnviar = document.getElementById('btn-enviar-encuesta');
+    btnEnviar.disabled = true;
+    btnEnviar.textContent = '⏳ Guardando...';
+
+    guardarRespuesta(respuestas)
+      .then(function(data) {
+        mostrarResultadosEncuesta(data);
+      })
+      .catch(function() {
+        alert('💧 No se pudo guardar la respuesta. Revisa tu conexión e inténtalo de nuevo.');
+      })
+      .then(function() {
+        btnEnviar.disabled = false;
+        btnEnviar.textContent = '✉️ Enviar Encuesta';
+      });
   });
 }
 
-// Cerrar modal
-var btnCerrarModal = document.getElementById('btn-cerrar-modal');
-if (btnCerrarModal) {
-  btnCerrarModal.addEventListener('click', function() {
-    document.getElementById('modal-exito').classList.remove('visible');
+// Mostrar la pantalla de resultados al terminar la encuesta
+function mostrarResultadosEncuesta(data) {
+  formEncuesta.style.display = 'none';
+  var totalEl = document.getElementById('resultados-total');
+  if (totalEl) {
+    totalEl.textContent = 'Total de respuestas: ' + data.total;
+  }
+  dibujarGraficas(data, document.getElementById('resultados-graficas'));
+  // Refrescar también la tabla del home
+  inicializarTablaHome();
+  var panel = document.getElementById('encuesta-resultados');
+  panel.classList.add('visible');
+  window.scrollTo(0, 0);
+}
+
+// Botón "Responder de nuevo"
+var btnVolverEncuesta = document.getElementById('btn-volver-encuesta');
+if (btnVolverEncuesta) {
+  btnVolverEncuesta.addEventListener('click', function() {
+    document.getElementById('encuesta-resultados').classList.remove('visible');
     formEncuesta.reset();
-    // Quitar clases seleccionada
+    formEncuesta.style.display = 'block';
     document.querySelectorAll('.opcion.seleccionada').forEach(function(op) {
       op.classList.remove('seleccionada');
     });
+    window.scrollTo(0, 0);
   });
 }
 
