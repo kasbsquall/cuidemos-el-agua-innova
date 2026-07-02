@@ -16,12 +16,16 @@ menuToggle.addEventListener('click', function() {
   navLinks.classList.toggle('abierto');
 });
 
-// Cambiar de página al hacer clic en el menú
+// Cambiar de página al hacer clic en el menú (se actualiza el hash de la URL)
 todosLosLinks.forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     var pagina = this.getAttribute('data-page');
-    cambiarPagina(pagina);
+    location.hash = pagina;
+    // Si el hash no cambió (ya estábamos ahí), navegar de todos modos
+    if (('#' + pagina) === location.hash) {
+      irASeccionDesdeHash();
+    }
     // Cerrar menú móvil
     navLinks.classList.remove('abierto');
   });
@@ -30,8 +34,24 @@ todosLosLinks.forEach(function(link) {
 // Logo lleva al inicio
 logoHome.addEventListener('click', function(e) {
   e.preventDefault();
-  cambiarPagina('inicio');
+  location.hash = 'inicio';
+  irASeccionDesdeHash();
 });
+
+// ---- Deep-link: abrir la sección según el hash de la URL ----
+// Permite que cada QR lleve a su sección (ej: .../#videos)
+var PAGINAS_VALIDAS = ['inicio', 'encuesta', 'videos', 'juegos'];
+
+function irASeccionDesdeHash() {
+  var destino = (location.hash || '').replace('#', '').toLowerCase();
+  if (PAGINAS_VALIDAS.indexOf(destino) >= 0) {
+    cambiarPagina(destino);
+  }
+}
+
+window.addEventListener('hashchange', irASeccionDesdeHash);
+// Al cargar la página, respetar el hash (deep-link del QR)
+irASeccionDesdeHash();
 
 // Función para cambiar de página
 function cambiarPagina(nombrePagina) {
