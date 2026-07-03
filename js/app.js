@@ -50,8 +50,8 @@ function irASeccionDesdeHash() {
 }
 
 window.addEventListener('hashchange', irASeccionDesdeHash);
-// Al cargar la página, respetar el hash (deep-link del QR)
-irASeccionDesdeHash();
+// Nota: la navegación inicial por hash (deep-link del QR) se ejecuta al FINAL
+// del archivo, cuando ya están definidos los juegos y todos los manejadores.
 
 // Función para cambiar de página
 function cambiarPagina(nombrePagina) {
@@ -838,3 +838,8 @@ window.addEventListener('scroll', function() {
 document.addEventListener('DOMContentLoaded', function() {
   animarEntradas();
 });
+
+// ---- Deep-link inicial (QR) ----
+// Se ejecuta al final, cuando ya están definidos preguntasTrivia, cargarJuego
+// y todos los manejadores. Así, al entrar por QR a #juegos, la trivia carga bien.
+irASeccionDesdeHash();
