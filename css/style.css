@@ -1674,6 +1674,76 @@ body {
   font-weight: normal;
 }
 
+/* --- VIDEO DESTACADO (video del proyecto) --- */
+.video-destacado {
+  background: var(--blanco);
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--sombra);
+  margin: 25px 0 35px;
+  border-top: 6px solid var(--turquesa);
+}
+
+.video-destacado-info {
+  text-align: center;
+  padding: 24px 24px 18px;
+}
+
+.video-destacado-info h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.4rem;
+  color: var(--azul-oscuro);
+  line-height: 1.3;
+}
+
+.video-destacado-info p {
+  font-size: 1.05rem;
+  color: #5a7a9a;
+  margin-top: 6px;
+}
+
+.video-destacado-player {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #000;
+}
+
+.video-destacado-player video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- GRID 2x2 fijo para los 3 videos + imagen --- */
+.videos-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+  .videos-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tarjeta con la imagen "¡Cuidemos el agua!" (4ta celda) */
+.video-card-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--blanco), var(--turquesa-claro));
+  padding: 20px;
+}
+
+.video-card-imagen img {
+  max-width: 100%;
+  max-height: 240px;
+  width: auto;
+}
+
 /* --- RESULTADOS ENCUESTA: tabla en el home --- */
 .resultados-cargando,
 .resultados-vacio {
